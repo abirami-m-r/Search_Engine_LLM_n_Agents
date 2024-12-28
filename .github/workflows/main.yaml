@@ -17,4 +17,6 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://abirami03:$HF_TOKEN@huggingface.co/spaces/abirami03/Search_Engine_LLM_n_Agents main
+        run: |
+           git pull --rebase origin main 
+           git push https://abirami03:$HF_TOKEN@huggingface.co/spaces/abirami03/Search_Engine_LLM_n_Agents main
